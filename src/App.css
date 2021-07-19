@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* ----------------------------------------------------- */
+/* ----------MY CSS------------------ */
+.Web-Ex {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color:blue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+.Web-Ex-Height {
+  background-color: brown;
+  
+  display: flex;
+  height: 150%;
+  align-items: center;
+  justify-content: center;
+}
