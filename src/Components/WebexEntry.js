@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Header, Segment, Grid, GridColumn, Button, Icon, Image, Dropdown } from "semantic-ui-react";
+import { Header, Segment, Grid, GridColumn, Button, Icon, Image, Dropdown, Label } from "semantic-ui-react";
+import '../App.css'
 
 const options = [
     {
@@ -17,8 +18,8 @@ const options = [
             // <Header icon='headphones' content='Audio: Use Computer audio' as='h5'/>
         ),
         text: (
-            <span>
-                <Icon name='headphones'/> Audio: Use Computer audio
+            <span className = "Dropdown-Width">
+                <Icon name='headphones'/ > Audio: Use Computer audio
             </span>
         )
     },
@@ -53,24 +54,24 @@ const options = [
 ]
 
 const WebexEntry = () => (
-    <Grid centered >
+    <Grid stackable>
         <Grid.Row>
             <Grid.Column textAlign='center' >
                 <Segment>
                     <Segment textAlign='center' basic padded className="Web-Ex-Height"><Image src='https://infosys.webex.com/webappng/images/avatars/a.png' size='medium' circular /></Segment>
                     <Segment basic>
-                        <Grid>
-                            <Grid.Row columns={3} stretched verticalAlign='middle'>
+                        <Grid stackable>
+                            <Grid.Row columns={3}  verticalAlign='middle'>
                                 <Grid.Column>
 
                                 </Grid.Column>
                                 <Grid.Column>
                                     {/* <Segment basic>  */}
-                                        <Button circular size='medium' >
+                                        <Button circular size='medium' className='Dropdown-Width'>
                                             <Dropdown  
-                                                inline
                                                 options = {options}
                                                 defaultValue = {options[1].value}
+                                                wrapSelection
                                             />
                                         </Button>
                                     {/* </Segment> */}
@@ -84,8 +85,8 @@ const WebexEntry = () => (
                 </Segment>
             </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-            <Grid.Column width={10} textAlign='center'>
+        <Grid.Row > 
+            <Grid.Column textAlign='center'>
                 <Button className = "White-Button" circular size='medium' ><Icon name='mute' color='red'/>Unmute</Button>
                 <Button className="White-Button" circular size='medium'><Icon name='video' color='red'/>Start Video</Button>
                 <Button circular size='medium' color='green'>Join Meeting</Button>

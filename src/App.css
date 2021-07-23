@@ -67,3 +67,7 @@ button.ui.medium.circular.button.White-Button {
   background: white;
   color: rgba(0, 0, 0, 0.781);
 }
+
+.Dropdown-Width {
+  min-width: 200pt;
+}
