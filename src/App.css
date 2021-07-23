@@ -40,7 +40,7 @@
 /* ----------------------------------------------------- */
 /* ----------MY CSS------------------ */
 .Web-Ex {
-  /* background-color: #282c34; */
+  background-color: hsl(0, 0%, 85%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -61,4 +61,9 @@
   height: 150%;
   align-items: center;
   justify-content: center;
+}
+
+button.ui.medium.circular.button.White-Button {
+  background: white;
+  color: rgba(0, 0, 0, 0.781);
 }
