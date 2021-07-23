@@ -1,5 +1,43 @@
 import React, { Component } from 'react'
-import { Header, Segment, Grid, GridColumn, Button, Icon, Image } from "semantic-ui-react";
+import { Header, Segment, Grid, GridColumn, Button, Icon, Image, Dropdown } from "semantic-ui-react";
+
+const options = [
+    {
+        key: 'Audio Connection',
+        text: 'Audio Connection',
+        disabled: true
+    },
+    {
+        key: 'Computer',
+        value: 'Audio: Use Computer audio',
+        content: (
+            <Header icon='headphones' content='Audio: Use Computer audio' as='h5'/>
+        ),
+        text: (
+            <Header icon='headphones' content='Audio: Use Computer audio' as='h5'/>
+        )
+    },
+    {
+        key: 'CallIn',
+        value: 'Call In',
+        content: (
+            <Header icon='call' content='Call In' as='h5'></Header>
+        ),
+        text: (
+            <Header icon='call' content='Call In' as='h5'></Header>
+        )
+    },
+    {
+        key: 'Don\'t connect to Audio',
+        value: 'Don\'t connect to Audio',
+        content: (
+            <Header icon='ban   ' content='Don&#39;t connect to Audio' as='h5'></Header>
+        ),
+        text: (
+            <Header icon='ban   ' content='Don&#39;t connect to Audio' as='h5'></Header>
+        )
+    }
+]
 
 const WebexEntry = () => (
     <Grid centered >
@@ -15,7 +53,14 @@ const WebexEntry = () => (
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment basic> 
-                                        <Button circular fluid>Audio: Use Computer audio</Button></Segment>
+                                        <Button circular fluid>
+                                            <Dropdown
+                                                inline
+                                                options = {options}
+                                                defaultValue = {options[1].value}
+                                            />
+                                        </Button>
+                                    </Segment>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Segment textAlign="center" basic><a href='www.google.com'><Icon name='setting'/>Test Speaker and Microphone</a></Segment>
