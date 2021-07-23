@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Header, Segment, Grid, GridColumn, Button, Icon } from "semantic-ui-react";
+import { Header, Segment, Grid, GridColumn, Button, Icon, Image } from "semantic-ui-react";
 
 const WebexEntry = () => (
     <Grid centered >
         <Grid.Row>
             <Grid.Column textAlign='center' >
                 <Segment>
-                    <Segment textAlign='center' basic padded='very' className="Web-Ex-Height"><Icon name='play' size='massive' /></Segment>
+                    <Segment textAlign='center' basic padded className="Web-Ex-Height"><Image src='https://infosys.webex.com/webappng/images/avatars/aa.png' size='medium' circular /></Segment>
                     <Segment basic>
                         <Grid>
                             <Grid.Row columns={3} stretched verticalAlign='middle'>
